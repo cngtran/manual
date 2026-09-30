@@ -243,6 +243,11 @@ button:hover{
     border-bottom:3px solid #0066cc;
 }
 
+#dangky:active {
+    border-bottom:3px solid #0066cc;
+}
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -377,4 +382,19 @@ body {
 .paymethod {
     margin-left: auto;
     color: gray;
+}
+
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#dangnhap.tab-active,
+#dangky.tab-active {
+    border-bottom: 3px solid #0066cc;
+    color: #0066cc;
 }
