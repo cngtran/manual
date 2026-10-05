@@ -3,6 +3,7 @@
 <head>
     <title>Thông tin tài khoản</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,7 +11,7 @@
     <nav class="navbar">
         <a href="https://cngtran.github.io/webproject/trang-chu.html" class="logo1">
             <div class="logo">
-                <img src="hn.png" width="50px" height="50px" alt="logo" >
+                <img src="hn.png" width="50" height="50" alt="Logo Hạnh Nguyễn">
                 <div class="brand">
                     <div class="h1">
                         <h1>Hạnh Nguyễn</h1>
@@ -30,17 +31,18 @@
                 <li><a href="#">Liên Hệ</a></li>
             </ul>
         </div>
+
         <div class="group">
-            <img src="search.png" width="20" height="20">
-            <input id ="bar" type="text" placeholder="Tìm kiếm sản phẩm">
-            <a href="#"><img src="user.png" width="20" height="20"></a>
-            <a href="#"><img src="cart.png" width="20" height="20"></a>
+            <img src="search.png" width="20" height="20" alt="Tìm kiếm">
+            <input id="bar" type="text" placeholder="Tìm kiếm sản phẩm">
+            <a href="#"><img src="user.png" width="20" height="20" alt="Tài khoản"></a>
+            <a href="#"><img src="cart.png" width="20" height="20" alt="Giỏ hàng"></a>
             <a href="https://cngtran.github.io/webproject/lien-he.html">
-                <button id="baogia">Nhận báo giá</button>
+                <button id="baogia" type="button">Nhận báo giá</button>
             </a>
         </div>
     </nav>
-    
+
     <header class="header">
         <h3>Trang chủ / Tài khoản</h3>
         <h1>TÀI KHOẢN ĐƠN VỊ</h1>
@@ -48,73 +50,101 @@
     </header>
 
     <div class="login">
-        <div class="log">
-            <div class="switch"> 
-                    <div class="dangnhap">
-                        <button id="dangnhap">ĐĂNG NHẬP</button>
-                    </div>
-                    <div class="dangky">
-                        <button id="dangky">ĐĂNG KÝ</button>
-                    </div>
-            </div>
-            <div>
-                <p>Email công tác</p>
-                <input class="pass" type="text" placeholder="Nhập tên của bạn">
+
+        <div id="log">
+            <div class="switch">
+                <button type="button" id="dangnhap" class="tab-active">ĐĂNG NHẬP</button>
+                <button type="button" id="dangky">ĐĂNG KÝ</button>
             </div>
 
-            <div>
-                <p>Mật khẩu</p>
-                <input class="pass" type="password" placeholder="Nhập mật khẩu của bạn">
+            <div id="form-dangnhap" class="form-content">
+                <div class="field">
+                    <label for="email-dn">Email công tác</label>
+                    <input class="pass" id="email-dn" type="email" placeholder="ketoan@thcs-abc.edu.vn">
+                </div>
+
+                <div class="field">
+                    <label for="mk-dn">Mật khẩu</label>
+                    <input class="pass" id="mk-dn" type="password" placeholder="Nhập mật khẩu của bạn">
+                </div>
+
+                <div class="remember">
+                    <div class="remember-left">
+                        <input type="checkbox" id="checkbox">
+                        <label id="check" for="checkbox">Ghi nhớ mật khẩu</label>
+                    </div>
+                    <a id="forget" href="#">Quên mật khẩu ?</a>
+                </div>
+
+                <button type="button" class="logbut">Đăng nhập</button>
             </div>
-            <div class="remember">
-                <input type="checkbox" id="checkbox">
-                <label id="check" for="checkbox">Ghi nhớ mật khẩu</label>
-                <a id="forget" href="#">Quên mật khẩu ?</a>
+
+            <div id="form-dangky" class="form-content" hidden>
+                <div class="field">
+                    <label for="ten-dk">Tên đơn vị / Họ và tên</label>
+                    <input class="pass" id="ten-dk" type="text" placeholder="THCS ABC hoặc Nguyễn Văn A">
+                </div>
+
+                <div class="field">
+                    <label for="email-dk">Email công tác</label>
+                    <input class="pass" id="email-dk" type="email" placeholder="ketoan@thcs-abc.edu.vn">
+                </div>
+
+                <div class="field">
+                    <label for="mk-dk">Mật khẩu</label>
+                    <input class="pass" id="mk-dk" type="password" placeholder="Tối thiểu 6 ký tự">
+                </div>
+
+                <button type="button" class="logbut">Tạo tài khoản</button>
             </div>
-            <button class="logbut">Đăng nhập</button>
         </div>
+
         <div class="info">
-           <div>
-            <h3>Có tài khoản để làm gì?</h3>
-           </div>
-           <div>
-            <h6 class="h6">Dành cho trường học, phòng ban và nhà thầu mua sắm thường xuyên.</h6>
-           </div>
-           <div class="s1">
+            <div>
+                <h3>Có tài khoản để làm gì?</h3>
+            </div>
+            <div>
+                <h6 class="h6">Dành cho trường học, phòng ban và nhà thầu mua sắm thường xuyên.</h6>
+            </div>
+
+            <div class="s1">
                 <div class="square">1</div>
                 <div class="s1content">
                     <div class="s1text">Lưu và tải lại báo giá</div>
                     <p class="stext">Giữ nguyên danh mục đã chọn cho kỳ mua sắm sau.</p>
                 </div>
-           </div>
-           <div class="s2">
+            </div>
+
+            <div class="s2">
                 <div class="square">2</div>
                 <div class="s2content">
                     <div class="s1text">Theo dõi giao hàng & lắp đặt</div>
                     <p class="stext">Biết chính xác ngày xe tới trường và đội lắp đặt phụ trách.</p>
                 </div>
-           </div>
-           <div class="s3">
+            </div>
+
+            <div class="s3">
                 <div class="square">3</div>
-                <div class="s1content">
+                <div class="s3content">
                     <div class="s1text">Giá dành riêng cho đơn vị</div>
                     <p class="stext">Chiết khấu theo khối lượng, áp dụng tự động khi đặt hàng.</p>
                 </div>
-           </div>
-           <hr>
-           <div class="sp">
-            <p>Cần hỗ trợ mở tài khoản?</p>
-            <p id="p2">0901 234 567</p>
-           </div>
+            </div>
+
+            <hr>
+
+            <div class="sp">
+                <p>Cần hỗ trợ mở tài khoản?</p>
+                <p id="p2">0901 234 567</p>
+            </div>
         </div>
     </div>
-
 
     <footer class="foot">
         <div class="altnav">
             <div class="foot1">
                 <div class="title">
-                    <img src="hn.png" width="50px" height="50px" alt="logo" >
+                    <img src="hn.png" width="50" height="50" alt="Logo Hạnh Nguyễn">
                     <h2>Hạnh Nguyễn</h2>
                 </div>
                 <div class="texty">
@@ -143,7 +173,7 @@
                     <a href="#">Về chúng tôi</a>
                     <a href="#">Giải pháp trọn gói</a>
                     <a href="#">Dự án đã thực hiện</a>
-                    <a href="#">tuyển dụng</a>
+                    <a href="#">Tuyển dụng</a>
                 </div>
             </div>
 
@@ -158,9 +188,6 @@
                     <a href="#">Thứ 2 – Thứ 6, 8:00 – 17:30</a>
                 </div>
             </div>
-
-
-
         </div>
 
         <div class="last">
@@ -179,14 +206,7 @@
             </div>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
-
-
-
-
-
-
-
-
 </html>
